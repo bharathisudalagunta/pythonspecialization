@@ -1,0 +1,38 @@
+'''Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. 
+Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and 
+put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.'''
+
+#CODE:
+
+num = int(input("Enter a number: "))
+largest = num
+smallest = num
+while num!=0:
+    try:
+        num = input("Enter a number: ")
+        if(num == "done"):
+            num=0
+        else:
+            n=int(num)
+        if(largest<n):
+            largest=n
+        if(smallest>n):    
+            smallest=n
+    except:
+        print("Invalid input")
+print("Maximum is",end=" ")
+print(largest)
+print("Minimum is",end=" ")
+print(smallest)
+
+'''input:
+Enter a number:7
+Enter a number:2
+Enter a number:bob
+Enter a number:10
+Enter a number:2'''
+
+'''output:
+Invalid input
+Maximum is 10
+Minimum is 2'''
