@@ -6,12 +6,12 @@ error checking the user input - assume the user types numbers properly'''
 
 
 #CODE:
-hrs = input(&quot;Enter Hours:&quot;)
+hrs = input("Enter Hours:")
 hrs = float(hrs)
-rate=float(input(&quot;Enter rate per hr&quot;))
+rate=float(input("Enter rate per hr"))
 pay=0
-if(hrs&lt;=40):
-pay=hrs*rate
+if(hrs<=40):
+  pay=hrs*rate
 else:
-pay=(40*rate)+((hrs-40)*1.5*rate)
+  pay=(40*rate)+((hrs-40)*1.5*rate)
 print(pay)
